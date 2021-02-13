@@ -59,6 +59,7 @@ const Step2 = ({ operands, operators, onAddOperation }) => {
         onSubmit={handleAddOperation}
       >
         <LabeledSelect
+          id="sel_operator"
           label="Operator"
           value={operator}
           onChange={(e) => setOperator(e.target.value)}
@@ -70,6 +71,7 @@ const Step2 = ({ operands, operators, onAddOperation }) => {
           ))}
         </LabeledSelect>
         <LabeledInput
+          id="txt_operand"
           label="Operand"
           value={operand}
           onChange={(e) => setOperand(e.target.value)}

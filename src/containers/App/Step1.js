@@ -23,6 +23,7 @@ const Step1 = ({ onAddOperand }) => {
         onSubmit={handleAdd}
       >
         <LabeledInput
+          id="txt_number"
           label="Please enter a number"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
