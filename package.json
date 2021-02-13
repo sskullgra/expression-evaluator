@@ -13,9 +13,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prestart": "yarn tw:build",
     "build": "react-scripts build",
+    "prebuild": "yarn tw:build --env=production",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tw:build": "postcss ./src/styles/tailwind.css -o ./src/main.css",
+    "tw": "tailwindcss"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
   }
 }
